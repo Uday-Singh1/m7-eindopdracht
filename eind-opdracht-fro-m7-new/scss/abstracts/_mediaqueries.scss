@@ -1,0 +1,187 @@
+@use "../components/header.scss";
+@use "../components/cards.scss";
+@use "../components/display.scss";
+@use "../components/buttons.scss";
+@use "../components/footer.scss";
+@use "../abstracts/animation";
+@use "../abstracts/colors";
+
+
+@media screen and (max-width: 62.5rem) {
+
+  body {
+    height: 100vh;
+    position: relative;
+    //background: map-get(colors.$gradientOrangeRed, "background");
+  
+}
+
+.title__collection {
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.fa-spotify {
+  font-size: 2.3rem;
+}
+
+.title__collection:hover {
+  color: map-get(colors.$black,"color");
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: 140vh;
+  background: map-get(colors.$white,"color");
+  border-radius: 1.7%;
+  z-index: 0;
+  display: flex;
+  justify-content: center; /* Add this line */
+  align-items: center; /* Add this line */
+
+}
+
+.left__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 105%;
+  width: 50%;
+ padding-top: 15rem;
+}
+
+  .collection__article {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+
+  .collection__cards {
+    display: grid;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 169%;
+    height: 0rem;
+    
+  }
+
+  .cards__episodes {
+    transition: filter 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* add this line */
+  }
+  
+  .cards__episodes__images{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  .cards__episodes__images:hover {
+    filter: brightness(100%);
+  }
+
+
+  .date {
+    position: absolute;
+  }
+
+  .title {
+    position: absolute;
+  }
+
+
+
+  //RIGHT SECTION
+
+  .date-right {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+    top: 13%;
+  }
+
+  .title-right {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2.5rem;
+  
+  }
+
+  .right__section {
+    display: flex;
+    position: absolute;
+  }
+
+  .episode__container {
+    width: 150%;
+    height: 80rem;
+  }
+
+  .episode__banner {
+    align-items: center;
+    justify-content: center;
+    width: 133.3%;
+    height: 20rem;
+    background: map-get(colors.$gray,"background");
+    object-fit: contain;
+    overflow: scroll;
+  }
+
+  .episode__display{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20rem
+  }
+
+  .episode__paragraph {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 120%;
+    height: 17%;
+    font-size: 1.4rem;
+    overflow: scroll;
+    gap:3rem;
+  }
+
+  .source__button{
+    cursor: pointer;
+    font-size: 1.9rem;
+    border: none;
+    position: absolute;
+    left: -47%;
+    top: 55%;
+  }
+
+  .audio__tag{
+    position: absolute;
+    bottom: 51%;
+    padding-left: 1rem;
+    width: 28rem;
+
+  }
+  footer{
+  position: absolute;
+   left: 0;
+   font-size: 1.8rem;
+   text-align: center;
+   bottom: -16rem;
+  }
+}
+
+
+

@@ -1,0 +1,23 @@
+@use "../abstracts/mixins";
+@use "../abstracts/reset";
+@use "../abstracts/colors";
+@use "../abstracts/animation";
+
+
+.source__button{
+  @include mixins.ubuntu-font;
+    position: absolute;
+    cursor: pointer;
+    font-size: 2.5rem;
+    border: none;
+    width: 10rem;
+    right: 10%;
+    top: 73%;
+    transform: translateY(-50%);
+  }
+
+
+  .audio__tag{
+    position: absolute;
+    bottom: 20%;
+  }

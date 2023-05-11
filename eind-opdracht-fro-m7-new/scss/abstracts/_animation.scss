@@ -1,0 +1,56 @@
+@use "./colors";
+
+.fa-spotify {
+  transition: transform 0.5s ease-in-out;
+}
+
+.fa-spotify:hover {
+  transform: rotate(360deg);
+}
+
+.cards__episodes__images:hover{
+  transition: transform 0.3s ease-in-out;
+  
+
+}
+
+.cards__episodes__images:hover {
+  filter: brightness(40%);
+  transform: scale(1.02);
+}
+
+
+.title__collection {
+  color: map-get(colors.$black,"color");
+    //color: black;
+  /* Set default color */
+  transition: color 0.5s ease-in-out;
+}
+
+
+
+.title__collection:hover {
+  color: map-get(colors.$white,"color");
+  /* Set hover color */
+}
+
+
+
+.episode__display {
+  transition: filter 0.5s ease-in-out;
+ 
+}
+
+.episode__display:hover {
+  filter: brightness(40%);
+
+}
+
+
+.source__button:visited {
+  color: map-get(colors.$black,"color");
+}
+
+a:visited {
+  color: map-get(colors.$black,"color");
+}

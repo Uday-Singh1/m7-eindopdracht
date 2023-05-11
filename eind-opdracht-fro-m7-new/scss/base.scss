@@ -1,0 +1,56 @@
+@use "./abstracts/mixins";
+@use "./abstracts/reset";
+@use "./abstracts/colors";
+@use "./abstracts/animation";
+
+body {
+    position: relative;
+    height: 100vh;
+    background: map-get(colors.$gradient-3-green-black,"background");
+    //overflow: hidden;
+}
+
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 90vh;
+    background: map-get(colors.$white,"color");
+    border-radius: 1.7%;
+    z-index: 0;
+    display: flex;
+    animation-name: popup;
+}
+
+.left__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+
+.right__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    position: relative; /* Add this line */
+
+  }
+  
+  footer{
+    position: absolute;
+   bottom: 1rem;
+   left: 0;
+   width: 100%;
+   font-size: 3rem;
+   text-align: center;
+   @include mixins.ubuntu-font;
+ }

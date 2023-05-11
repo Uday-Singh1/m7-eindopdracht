@@ -1,0 +1,384 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+.fa-spotify {
+  transition: transform 0.5s ease-in-out;
+}
+
+.fa-spotify:hover {
+  transform: rotate(360deg);
+}
+
+.cards__episodes__images:hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.cards__episodes__images:hover {
+  filter: brightness(40%);
+  transform: scale(1.02);
+}
+
+.title__collection {
+  /* Set default color */
+  transition: color 0.5s ease-in-out;
+}
+
+.title__collection:hover {
+  color: white;
+  /* Set hover color */
+}
+
+.episode__display {
+  transition: filter 0.5s ease-in-out;
+}
+
+.episode__display:hover {
+  filter: brightness(40%);
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(#1DB954, #191414, #1DB954);
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: 90vh;
+  background: white;
+  border-radius: 1.7%;
+  z-index: 0;
+  display: flex;
+  animation-name: popup;
+}
+
+.left__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+
+.right__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  position: relative; /* Add this line */
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.title__collection {
+  display: flex;
+  justify-content: center;
+  padding: 0.3%;
+  height: 2rem;
+  font-size: 2.6rem;
+  position: relative;
+  z-index: 1;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.fa-spotify {
+  font-size: 3.5rem;
+}
+
+.collection__article {
+  padding: 1rem;
+}
+
+.collection__cards {
+  display: grid;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cards__episodes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  position: relative;
+  cursor: pointer;
+}
+
+.cards__episodes__images {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 5%;
+  transition: filter 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.date {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  position: absolute;
+  font-size: 1.8rem;
+  top: 0;
+  right: 0;
+}
+
+.title {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  position: absolute;
+  font-size: 1.8rem;
+  bottom: 1.5rem;
+  left: 0;
+}
+
+.title, .date {
+  z-index: 1;
+}
+
+.episode__container {
+  align-self: flex-end;
+  width: 100%;
+}
+
+.episode__banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add this line */
+  width: 90%;
+  height: 25rem;
+  background: gray;
+  object-fit: contain;
+  position: relative; /* Add this line */
+  border-radius: 2%;
+  border-top-right-radius: 3%;
+  border-top-left-radius: 3%;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
+
+.episode__display {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 25rem;
+  border-radius: 2%;
+}
+
+.date-right {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+}
+
+.title-right {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 2rem;
+}
+
+.episode__paragraph {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 1.2rem;
+  width: 90%;
+  font-size: 1.1rem;
+  overflow: scroll;
+}
+
+.source__button {
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  cursor: pointer;
+  font-size: 2.5rem;
+  border: none;
+  width: 10rem;
+  right: 10%;
+  top: 73%;
+  transform: translateY(-50%);
+}
+
+.audio__tag {
+  position: absolute;
+  bottom: 20%;
+}
+
+@media screen and (max-width: 62.5rem) {
+  body {
+    height: 100vh;
+    position: relative;
+  }
+  .title__collection {
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  .fa-spotify {
+    font-size: 2.3rem;
+  }
+  .main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 140vh;
+    background: white;
+    border-radius: 1.7%;
+    z-index: 0;
+    display: flex;
+    justify-content: center; /* Add this line */
+    align-items: center; /* Add this line */
+  }
+  .left__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 105%;
+    width: 50%;
+    padding-top: 15rem;
+  }
+  .collection__article {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+  .collection__cards {
+    display: grid;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 169%;
+    height: 0rem;
+  }
+  .cards__episodes {
+    transition: filter 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* add this line */
+  }
+  .cards__episodes__images {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  .cards__episodes__images:hover {
+    filter: brightness(100%);
+  }
+  .date {
+    position: absolute;
+  }
+  .title {
+    position: absolute;
+  }
+  .date-right {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+    top: 13%;
+  }
+  .title-right {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2.5rem;
+  }
+  .right__section {
+    display: flex;
+    position: absolute;
+  }
+  .episode__container {
+    width: 150%;
+    height: 80rem;
+  }
+  .episode__banner {
+    align-items: center;
+    justify-content: center;
+    width: 133.3%;
+    height: 20rem;
+    background: gray;
+    object-fit: contain;
+    overflow: scroll;
+  }
+  .episode__display {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20rem;
+  }
+  .episode__paragraph {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 120%;
+    height: 17%;
+    font-size: 1.4rem;
+    overflow: scroll;
+    gap: 3rem;
+  }
+  .source__button {
+    cursor: pointer;
+    font-size: 1.9rem;
+    border: none;
+    position: absolute;
+    left: -47%;
+    top: 55%;
+  }
+  .audio__tag {
+    position: absolute;
+    bottom: 51%;
+    padding-left: 1rem;
+    width: 28rem;
+  }
+  footer {
+    position: absolute;
+    left: 0;
+    font-size: 1.8rem;
+    text-align: center;
+    bottom: -16rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
